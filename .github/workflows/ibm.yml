@@ -61,7 +61,7 @@ jobs:
     # Push the image to IBM Container Registry
     - name: Push the image to ICR
       run: |
-        docker push de.icr.io/ba-ntg7/HelloWorldtest
+        docker push de.icr.io/ba-ntg7/helloworldtest
 
     # Deploy the Docker image to the IKS cluster
     - name: Deploy to IKS
