@@ -14,7 +14,6 @@ RUN apt-get install -y jq
 	
 #RUN chown -R jenkins /root/.bluemix
 
-USER jenkins
 
 RUN ibmcloud plugin install container-service && \
 	ibmcloud plugin install container-registry && \
