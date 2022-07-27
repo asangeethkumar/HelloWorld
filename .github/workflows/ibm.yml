@@ -20,9 +20,9 @@ env:
   IBM_CLOUD_REGION: eu-de
   ICR_NAMESPACE: ba-ntg7
   REGISTRY_HOSTNAME: de.icr.io
-  IMAGE_NAME: db-init-helper
+  IMAGE_NAME: testusinggithubactions
   IKS_CLUSTER: ba-ntg7
-  DEPLOYMENT_NAME: db-init-helper
+  DEPLOYMENT_NAME: testusinggithubactions
   PORT: 5001
 
 jobs:
