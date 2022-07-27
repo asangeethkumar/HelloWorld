@@ -19,10 +19,10 @@ env:
   IBM_CLOUD_API_KEY: -3NnbrDC8hA7rucy0hIP9QiMoWhTRLoMiSm8DVrWPAO0
   IBM_CLOUD_REGION: eu-de
   ICR_NAMESPACE: ba-ntg7
-  REGISTRY_HOSTNAME: dcr.icr.io
-  IMAGE_NAME: iks-test
+  REGISTRY_HOSTNAME: de.icr.io
+  IMAGE_NAME: db-init-helper
   IKS_CLUSTER: ba-ntg7
-  DEPLOYMENT_NAME: iks-test
+  DEPLOYMENT_NAME: db-init-helper
   PORT: 5001
 
 jobs:
