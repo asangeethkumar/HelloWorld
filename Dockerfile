@@ -6,7 +6,7 @@ LABEL name="maven-3.6-jdk-11-kubectl-ibmcloud" \
     
 USER root
 
-RUN apt-get update && apt-get upgrade &&\
+RUN apt-get -y update && apt-get -y upgrade &&\
 #curl -sL https://ibm.biz/idt-installer | bash
     curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
     
