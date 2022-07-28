@@ -16,13 +16,13 @@ on:
 # Environment variables available to all jobs and steps in this workflow
 env:
   GITHUB_SHA: ${{ github.sha }}
-  IBM_CLOUD_API_KEY: -3NnbrDC8hA7rucy0hIP9QiMoWhTRLoMiSm8DVrWPAO0
-  IBM_CLOUD_REGION: eu-de
-  ICR_NAMESPACE: ba-ntg7
+  IBM_CLOUD_API_KEY: ${{ secrets.IBM_API_KEY }}
+  IBM_CLOUD_REGION: ${{ secrets.REGION }}
+  ICR_NAMESPACE: ${{ secrets.CLUSTER }}
   REGISTRY_HOSTNAME: de.icr.io
-  IMAGE_NAME: testusinggithubactions
-  IKS_CLUSTER: ba-ntg7
-  DEPLOYMENT_NAME: testusinggithubactions
+  IMAGE_NAME: ${{ secrets.IMAGE_NAME }}
+  IKS_CLUSTER: ${{ secrets.CLUSTER }}
+  DEPLOYMENT_NAME: ${{ secrets.IMAGE_NAME }}
   PORT: 5001
 
 jobs:
