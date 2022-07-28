@@ -19,7 +19,7 @@ env:
   IBM_CLOUD_API_KEY: ${{ secrets.IBM_API_KEY }}
   IBM_CLOUD_REGION: ${{ secrets.REGION }}
   ICR_NAMESPACE: ${{ secrets.CLUSTER }}
-  REGISTRY_HOSTNAME: de.icr.io
+  REGISTRY_HOSTNAME: ${{ secrets.REGISTRY }}
   IMAGE_NAME: ${{ secrets.IMAGE_NAME }}
   IKS_CLUSTER: ${{ secrets.CLUSTER }}
   DEPLOYMENT_NAME: ${{ secrets.IMAGE_NAME }}
