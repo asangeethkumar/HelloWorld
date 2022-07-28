@@ -47,8 +47,8 @@ jobs:
     # Authenticate with IBM Cloud CLI
     - name: Authenticate with IBM Cloud CLI
       run: |
-        ibmcloud login -r eu-de --apikey -3NnbrDC8hA7rucy0hIP9QiMoWhTRLoMiSm8DVrWPAO0
-        ibmcloud cr region-set eu-de
+        ibmcloud login -r eu-de --apikey "${IBM_CLOUD_API_KEY}"
+        ibmcloud cr region-set "${IBM_CLOUD_REGION}"
         ibmcloud cr login
 
     # Build the Docker image
