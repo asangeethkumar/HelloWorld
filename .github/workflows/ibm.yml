@@ -18,7 +18,7 @@ env:
   ICR_NAMESPACE: ${{ secrets.CLUSTER }}
   REGISTRY_HOSTNAME: ${{ secrets.REGISTRY }}
   IMAGE_NAME: ${{ secrets.IMAGE_NAME }}
-  IKS_CLUSTER: ${{ secrets.CLUSTER }}
+  IKS_CLUSTER: ${{ secrets.IKS_CLUSTER }}
   DEPLOYMENT_NAME: ${{ secrets.IMAGE_NAME }}
   PORT: 5001
 
