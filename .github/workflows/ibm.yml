@@ -25,6 +25,8 @@ env:
   IMAGE_NAME: ${{ secrets.IMAGE_NAME }}
   IKS_CLUSTER: ${{ secrets.IKS_CLUSTER }}
   DEPLOYMENT_NAME: ${{ secrets.IMAGE_NAME }}
+  INPUT_TAGS : ${{inputs.tags}}
+  INPUT_LOGLEVEL : ${{inputs.loglevel}}
   PORT: 5001
 
 jobs:
@@ -54,7 +56,7 @@ jobs:
         ibmcloud cr login
         
     - name: Call a Bash Script
-      run:  bash ${GITHUB_WORKSPACE}/printecho.sh
+      run:  bash ${GITHUB_WORKSPACE}/printecho.sh --loglevel ${INPUT_LOGLEVEL} --tags ${INPUT_TAGS}
 
     # Build the Docker image
     - name: Build with Docker
