@@ -1,5 +1,2 @@
-echo ${ inputs.logLevel }
-
-
+${{ github.event.inputs.tags }}"
 echo "next value is tag"
-echo ${inputs.tags}
