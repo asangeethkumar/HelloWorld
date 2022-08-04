@@ -52,6 +52,9 @@ jobs:
         ibmcloud login -r eu-de --apikey "${IBM_CLOUD_API_KEY}"
         ibmcloud cr region-set "${IBM_CLOUD_REGION}"
         ibmcloud cr login
+        
+    - name: Call a Bash Script
+      run:  bash ${GITHUB_WORKSPACE}/printecho.sh
 
     # Build the Docker image
     - name: Build with Docker
