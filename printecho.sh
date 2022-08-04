@@ -1,6 +1,5 @@
-echo ${{ inputs.logLevel }} 
-echo $INPUT_LOGLEVEL
+echo ${ inputs.logLevel }
+
 
 echo "next value is tag"
-echo ${{inputs.tags}}
-echo $INPUT_TAGS
+echo ${inputs.tags}
