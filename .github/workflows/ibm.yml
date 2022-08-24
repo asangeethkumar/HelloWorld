@@ -56,7 +56,7 @@ jobs:
         ibmcloud cr login
         
     - name: Call a Bash Script
-      run:  bash ${GITHUB_WORKSPACE}/printecho.sh  ${INPUT_LOGLEVEL} ${INPUT_TAGS}
+      run:  bash ${GITHUB_WORKSPACE}/printecho.sh
 
     # Build the Docker image
     - name: Build with Docker
