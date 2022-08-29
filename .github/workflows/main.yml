@@ -1,0 +1,47 @@
+# This workflow will build a docker container, publish it to IBM Container Registry, and deploy it to IBM when there is a push to the "main" branch.
+#
+# To configure this workflow:
+
+
+name: Build and Deploy to IBM
+
+on:
+ workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'     
+        required: true
+        default: 'warning'
+      tags:
+        description: 'Test scenario tags'  
+
+      
+
+# Environment variables available to all jobs and steps in this workflow
+env:
+  GITHUB_SHA: ${{ github.sha }}
+  IBM_CLOUD_API_KEY: ${{ secrets.IBM_API_KEY }}
+  IBM_CLOUD_REGION: ${{ secrets.REGION }}
+  ICR_NAMESPACE: ${{ secrets.CLUSTER }}
+  REGISTRY_HOSTNAME: ${{ secrets.REGISTRY }}
+  IMAGE_NAME: ${{ secrets.IMAGE_NAME }}
+  IKS_CLUSTER: ${{ secrets.IKS_CLUSTER }}
+  DEPLOYMENT_NAME: ${{ secrets.IMAGE_NAME }}
+  CLUSTER : ${{inputs.cluster}}
+  APP : ${{inputs.app}}
+  VERSION : ${{inputs.version}}
+  SUFFIX : ${{inputs.suffix}}
+  EMPTYSUFFIX : ${{inputs.emptysuffix}}
+  GIT_USERNAME: ${{ secrets.GIT_USERNAME }}
+  GIT_PASSWORD: ${{ secrets.GIT_PASSWORD }}
+  PORT: 5001
+  LOGLEVEL : ${{inputs.logLevel}}
+
+jobs:
+  setup-build-publish-deploy:
+    name: Setup, Build, Publish, and Deploy
+    runs-on: self-hosted
+    steps:
+    - run: |
+        echo "FOO: ${{inputs.logLevel}}"
+      shell: bash
