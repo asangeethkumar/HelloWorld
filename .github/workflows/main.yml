@@ -3,7 +3,7 @@
 # To configure this workflow:
 
 
-name: Build and Deploy to IBM
+name: Build and Deploy to IBM-test branch
 
 on:
  workflow_dispatch:
