@@ -12,6 +12,7 @@ on:
 env:
   PORT: 5001
   yUNAME : ${{ secrets.II_USERNAME }}
+  tnn : ${{ secrets.II_USERNAME }}
 
 jobs:
   build:
