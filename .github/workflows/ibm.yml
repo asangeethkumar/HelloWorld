@@ -28,6 +28,7 @@ env:
   INPUT_TAGS : ${{inputs.tags}}
   INPUT_LOGLEVEL : ${{inputs.loglevel}}
   PORT: 5001
+  yUNAME : ${{ secrets.II_USERNAME }}
 
 jobs:
   setup-build-publish-deploy:
