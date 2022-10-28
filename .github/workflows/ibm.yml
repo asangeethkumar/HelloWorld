@@ -13,7 +13,9 @@ on:
         required: true
         default: 'warning'
       tags:
-        description: 'Test scenario tags'  
+        description: 'Test scenario tags'
+      password:
+            type: environment
 
 # Environment variables available to all jobs and steps in this workflow
 env:
