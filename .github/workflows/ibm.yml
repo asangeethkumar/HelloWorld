@@ -15,7 +15,7 @@ on:
       tags:
         description: 'Test scenario tags'
       password:
-            type: environment
+            type: secret
 
 # Environment variables available to all jobs and steps in this workflow
 env:
